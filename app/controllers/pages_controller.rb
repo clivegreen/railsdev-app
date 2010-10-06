@@ -12,4 +12,8 @@ class PagesController < ApplicationController
     @locationName = "About"
   end
 
+  def help
+    @locationName = "Help"
+  end
+
 end

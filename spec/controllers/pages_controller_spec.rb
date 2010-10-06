@@ -4,6 +4,10 @@ describe PagesController do
   
   render_views
   
+  before(:each) do
+    @pageTitlePrefix = "Current Location: "
+  end
+  
   describe "GET 'home'" do
     
     it "should be successful" do
@@ -13,7 +17,7 @@ describe PagesController do
 
     it "should have the right title" do
       get 'home'
-      response.should have_selector("title", :content => "Current Location: Home")
+      response.should have_selector("title", :content => @pageTitlePrefix+"Home")
     end
     
   end
@@ -27,7 +31,7 @@ describe PagesController do
 
     it "should have the right title" do
       get 'contact'
-      response.should have_selector("title", :content => "Current Location: Contact")
+      response.should have_selector("title", :content => @pageTitlePrefix+"Contact")
     end
     
   end
@@ -41,7 +45,21 @@ describe PagesController do
 
     it "should have the right title" do
       get 'about'
-      response.should have_selector("title", :content => "Current Location: About")
+      response.should have_selector("title", :content => @pageTitlePrefix+"About")
+    end
+
+  end
+
+  describe "GET 'help'" do
+    
+    it "should be successful" do
+      get 'help'
+      response.should be_success
+    end
+
+    it "should have the right title" do
+      get 'help'
+      response.should have_selector("title", :content => @pageTitlePrefix+"Help")
     end
 
   end
