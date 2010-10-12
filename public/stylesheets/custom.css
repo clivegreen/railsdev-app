@@ -1,9 +1,20 @@
+/* @override 
+	http://localhost:3000/stylesheets/custom.css?1286796701
+	http://localhost:3000/stylesheets/custom.css?1286769702
+	http://localhost:3000/stylesheets/custom.css?1286797997
+*/
+
 .container { 
 	width: 710px;
+	border: 0 solid #919191;
 }
 
 body {
-	background-color: #dde;	
+	background: #eaeaea none repeat fixed left top;
+	width: 100%;
+	height: 100px;
+	margin: 20px;
+	opacity: 1;
 }
 
 header { 
@@ -12,6 +23,10 @@ header {
 
 header img { 
 	padding: 1em;
+}
+
+header img.round {
+	border: none;
 }
 
 section { 
@@ -31,8 +46,8 @@ a {
 }
 
 a:hover { 
-	color: #069;
-	text-decoration: underline;
+	color: #000;
+	text-decoration: none;
 }
 
 a:visited { 
@@ -64,6 +79,8 @@ nav ul li {
 nav ul li a { 
 	padding: 0 5px;
 	font-weight: bold;
+	border-right-color: #000;
+	border-right-width: 2px;
 }
 
 nav ul li a:visited { 
@@ -71,7 +88,10 @@ nav ul li a:visited {
 }
 
 nav ul li a:hover {
-	text-decoration: underline;
+	color: #000;
+	text-decoration: none;
+	background-color: #ffffff;
+	font-weight: bold;
 }
 
 /* Sign up button */
@@ -79,20 +99,28 @@ a.signup_button {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-	width: 140px;
-	color: #fff;
-	background: #006400;
-	font-size: 120%;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-top: 2px;
-	padding-bottom: 5px;
+	clear: none;
+	background-color: #eaeaea;
+	overflow: hidden;
+	direction: ltr;
+	top: -15px;
+	right: -15px;
+	padding: 3px 20px 5px;
+	border: 1px solid #919191;
+	border-right: 1px solid #919191;
+	text-shadow: rgba(255,254,254,0) 0 0 0;
+	position: static;
+	float: none;
+	white-space: nowrap;
+	font: bold 100%/1em Verdana;
 }
 
 .round { 
 	-moz-border-radius: 10px; 
 	-webkit-border-radius: 10px; 
 	border-radius:	10px;
+	border: 1px solid #919191;
+	text-shadow: #fffefe 0px 0px 0;
 }
 
 footer {
